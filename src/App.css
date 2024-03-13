@@ -1,3 +1,7 @@
+:root {
+  --sub-heading-color: darkcyan;
+}
+
 .App {
   text-align: center;
 }

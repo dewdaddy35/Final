@@ -1,0 +1,18 @@
+.recipe {
+  background-color: #f7f9f9;
+}
+
+.recipe {
+  text-align: center; 
+}
+
+.recipe-img {
+  margin: 0 auto; 
+  width: 40%; 
+}
+
+.recipe-img img {
+  width: 100%; 
+  height: auto; 
+}
+

@@ -1,0 +1,8 @@
+.home {
+  background-color: #d3c6c6;
+}
+
+.home .santa-image {
+  border: 5px solid white;
+  width: 300px;
+}
