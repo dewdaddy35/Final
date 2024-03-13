@@ -1,8 +1,51 @@
-.home {
-  background-color: #d3c6c6;
+/*.container {
+    display: flex;
+    flex: wrap;
+}*/
+
+.home h1 {
+  background-color: #e3f2fd;
+  color: blue;
+  margin-bottom: 5px;
 }
 
-.home .santa-image {
-  border: 5px solid white;
-  width: 300px;
+.home .back {
+  background-color: orange;
+  border-color: black;
+  border-radius: 5px;
+  border: black;
+  padding-bottom: 10px;
+}
+
+.home .main-image {
+  width: 25%;
+}
+
+.home .card {
+  background-color: black;
+  margin-bottom: 5px;
+  height: 420px;
+  border-radius: 3rem;
+}
+.home .card p-3 {
+  padding: 0rem;
+}
+
+.home .list {
+  display: flex;
+}
+.home .form-control {
+}
+
+.home .card img {
+  height: 170px;
+}
+.home .card-body {
+  background-color: var(--bs-primary-bg-subtle);
+}
+.home .wraper {
+}
+.home .wrapper img {
+}
+.home a {
 }
