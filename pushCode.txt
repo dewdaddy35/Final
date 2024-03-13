@@ -1,0 +1,30 @@
+// pull main
+git pull
+
+// create the feature branch
+git checkout -b user/keywors
+
+// do your changes
+<CODE>
+
+// push your branch
+git add .
+git commit -m "MESSAGE HERE"
+git push
+
+-- or --
+USE VS CODE
+
+// create the PR / and merge
+on github page, create the PR
+verify changes
+click the merge button
+
+// go back to main 
+git checkout main
+
+// pull main
+git pull
+
+// create the feature branch
+git checkout -b users/another_name
