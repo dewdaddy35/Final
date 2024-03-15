@@ -1,9 +1,16 @@
 //import logo from "./logo.svg";
 import "./App.css";
+
 import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import Recipe from "./pages/recipe";
 import Footer from "./components/footer";
+import Beef from "./pages/beef";
+import Chicken from "./pages/chicken";
+import Seafood from "./pages/seafood";
+import Pork from "./pages/pork";
+import Rubs from "./pages/rubs";
+import Blog from "./pages/blog";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -19,6 +26,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/recipe" element={<Recipe />} />
+          <Route path="/beef" element={<Beef />} />
+          <Route path="chicken" element={<Chicken />} />
+          <Route path="seafood" element={<Seafood />} />
+          <Route path="pork" element={<Pork />} />
+          <Route path="rubs" element={<Rubs />} />
+          <Route path="blog" element={<Blog />} />
         </Routes>
 
         <Footer />
