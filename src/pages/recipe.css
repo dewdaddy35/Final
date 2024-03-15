@@ -1,5 +1,6 @@
 .recipe {
   background-color: #f7f9f9;
+  width: 100%;
 }
 
 .recipe {
@@ -7,12 +8,13 @@
 }
 
 .recipe-img {
-  margin: 0 auto; 
+  height: 200px;
+ justify-content: center;
+ margin-bottom: 200px; 
   width: 40%; 
 }
 
 .recipe-img img {
-  width: 100%; 
-  height: auto; 
+  
 }
 

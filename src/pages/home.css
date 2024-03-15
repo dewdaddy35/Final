@@ -4,48 +4,42 @@
 }*/
 
 .home h1 {
-  background-color: #e3f2fd;
+  
   color: blue;
   margin-bottom: 5px;
+  
 }
-
-.home .back {
-  background-color: orange;
-  border-color: black;
-  border-radius: 5px;
-  border: black;
-  padding-bottom: 10px;
-}
-
-.home .main-image {
-  width: 25%;
-}
-
-.home .card {
-  background-color: black;
-  margin-bottom: 5px;
-  height: 420px;
-  border-radius: 3rem;
-}
-.home .card p-3 {
-  padding: 0rem;
-}
-
-.home .list {
+.home section {
   display: flex;
 }
-.home .form-control {
+
+.home .img-main {  
+  margin-left: 25px;
+  height: 800px;
+  margin-top: 150px;
 }
 
-.home .card img {
-  height: 170px;
+.home p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+  margin-left: 300px;
+  margin-top: 150px;
 }
-.home .card-body {
-  background-color: var(--bs-primary-bg-subtle);
+
+.home .img-p {
+  height: 450px;
+  margin-right: 0px;
+  margin-top: 0px;
 }
-.home .wraper {
+.home .img-p2 {
+  height: 350px;
+  margin-bottom: 200px;
 }
-.home .wrapper img {
+.home flex {
+display: flex;
+flex-direction: column;
+margin-top:px;
 }
-.home a {
-}
+
