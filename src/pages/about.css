@@ -1,0 +1,18 @@
+.about {
+   
+
+}
+.about .cards {
+    margin-top: 40px;
+    display: flex;
+    gap: 300px;
+    margin-left: 500px;
+    height: 500px;
+    border-radius: 3rem;
+}
+.about .card img {
+    height: 300px;
+    border-radius: 1rem;
+    border-color: black;
+}
+

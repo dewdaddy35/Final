@@ -11,7 +11,11 @@ import Seafood from "./pages/seafood";
 import Pork from "./pages/pork";
 import Rubs from "./pages/rubs";
 import Blog from "./pages/blog";
-
+import Slowcooker from "./pages/slowcooker";
+import Smoker from "./pages/smoker";
+import Airfryer from "./pages/airfryer";
+import Bbqgrill from "./pages/bbqgrill";
+import About from "./pages/about";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -32,6 +36,11 @@ function App() {
           <Route path="pork" element={<Pork />} />
           <Route path="rubs" element={<Rubs />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="slowcooker" element={<Slowcooker />} />
+          <Route path="smoker" element={<Smoker />} />
+          <Route path="airfryer" element={<Airfryer />} />
+          <Route path="bbqgrill" element={<Bbqgrill />} />
+          <Route path="about" element={<About />} />
         </Routes>
 
         <Footer />

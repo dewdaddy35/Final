@@ -1,5 +1,6 @@
 import "./navbar.css";
 import Button from 'react-bootstrap/Button';
+
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from "react-router-dom";
@@ -18,15 +19,26 @@ function Navbar() {
       <Link className="nav-link-active" aria-current="page" to="/">
         Home
       </Link>
-      <Link className="nav-link-active" aria-current="page" to="/chicken">
+      <Link className="nav-link-active" aria-current="page" to="/about">
         About Us
       </Link>
       <Link className="nav-link-active" aria-current="page" to="/recipe">
         Recipes
       </Link>
-      
       <Dropdown as={ButtonGroup}>
-      <Button  href="/" variant="danger">Ingredients</Button>
+      <Button  href="" variant="danger">Kitchen Tips</Button>
+
+      <Dropdown.Toggle split variant="danger" id="dropdown-split-basic" />
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="/smoker">Smoker</Dropdown.Item>
+        <Dropdown.Item href="/airfryer">Airfryer</Dropdown.Item>
+        <Dropdown.Item href="/bbqgrill">BBQ Grill</Dropdown.Item>
+        <Dropdown.Item href="/slowcooker">Slow Cooker</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+      <Dropdown as={ButtonGroup}>
+      <Button  href="" variant="danger">Ingredients</Button>
 
       <Dropdown.Toggle split variant="danger" id="dropdown-split-basic" />
 

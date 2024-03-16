@@ -8,7 +8,7 @@ function Footer() {
       
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="#">
+            <Link className="navbar-brand" to="/">
               Burning Recipes
             </Link>
             <button
@@ -25,28 +25,28 @@ function Footer() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link className="nav-link" aria-current="page" to="#">
-                    Beef
+                  <Link className="nav-link" aria-current="page" to="/">
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/about">
+                    About Us
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
-                    Chicken
+                    
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
-                    Pork
+                    
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="#">
-                    Seafood
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                    Recipes
+                    
                   </Link>
                 </li>
               </ul>
