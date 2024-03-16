@@ -24,6 +24,15 @@ function Recipe() {
       <div className="recipe-img">
         <img src="/images/fish.jpg" alt="" />
       </div>
+      <div className="post-list">
+        { allPosts.map(post => 
+            <div className="post"  key={post.id}> 
+              <h3>{post.title}</h3>
+              <p>{post.content}</p>
+            </div> 
+        )}
+
+      </div>
       <form className="form-inline search my-2 my-lg-0">
   <input
     className="form-control search mr-sm-2"
@@ -35,15 +44,7 @@ function Recipe() {
     Search
   </button>
 </form>
-<div className="post-list">
-        { allPosts.map(post => 
-            <div className="post"  key={post.id}> 
-              <h3>{post.title}</h3>
-              <p>{post.content}</p>
-            </div> 
-        )}
 
-      </div>
     </div>
     
   );

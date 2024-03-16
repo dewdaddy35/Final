@@ -1,0 +1,42 @@
+<div className="container-fluid">
+      <Link className="navbar-brand" to="/">
+        Burning Recipes
+      </Link>
+      
+      <Link className="nav-link-active" aria-current="page" to="/">
+        Home
+      </Link>
+      <Link className="nav-link-active" aria-current="page" to="/chicken">
+        About Us
+      </Link>
+      <Link className="nav-link-active" aria-current="page" to="/recipe">
+        Recipes
+      </Link>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" to="" role="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          Ingredients
+        </a>
+       
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" to="/beef">Beef</a></li>
+          <li><a class="dropdown-item" to="/chicken">Chicken</a></li>
+          <li><a class="dropdown-item" to="/pork">Pork</a></li>
+          <li><a class="dropdown-item" to="/seafood">Seafood</a></li>
+          <li><hr class="dropdown-divider" to=""></hr> </li>
+          <li><a class="dropdown-item" to="#">Something else here</a></li>
+        </ul>
+        </li>
+  
+          <form className="d-flex" role="search">
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button className="btn btn-outline-primary " type="submit">
+              Search
+            </button>
+          </form>
+          </div>
