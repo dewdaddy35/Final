@@ -1,20 +1,23 @@
 .footer {
-  background-color: red;
   padding: 0 !important;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    bottom: 0;
-    
-  }
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+}
 
-  .fa-brands {
-    font-size: 30px;
-  }
+.fa-brands {
+  font-size: 30px;
+}
+
 .img {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    align-items: center;
-
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+}
+.navbar-nav {
+  justify-content: space-evenly;
+  width: 100%;
 }

@@ -44,3 +44,8 @@
 .container-fluid {
   background-color: #e3f2fd;
 }
+
+
+.page {
+  min-height: calc(100vh - 113px);
+}

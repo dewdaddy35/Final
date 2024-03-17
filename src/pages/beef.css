@@ -1,3 +1,9 @@
+.beef {
+    background-color: beige;
+}
+
 .beef img {
+    margin-bottom: 20px;;
     height: 500px
+   
 }

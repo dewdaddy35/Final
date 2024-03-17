@@ -2,8 +2,8 @@ import "./blog.css";
 
 function Blog() {
     return (
-        <div className="blog">
-            <h1>Beef Recipes!</h1>
+        <div className="blog page">
+            <h1>Blog!</h1>
         </div>
     );
 }

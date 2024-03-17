@@ -6,7 +6,7 @@ function Home() {
   
 
   return (
-    <div className="home">
+    <div className="home page">
       <h1> Show Us How You Burn!!! </h1>
       <section className="section">
         <div>

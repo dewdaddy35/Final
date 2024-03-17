@@ -1,3 +1,8 @@
-.fish img {
-    height: 500px;
+.seafood {
+    background-color: beige;
+}
+
+.seafood img {
+    height: 300px;
+    margin-bottom: 20px;
 }

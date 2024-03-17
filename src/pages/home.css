@@ -2,7 +2,9 @@
     display: flex;
     flex: wrap;
 }*/
-
+.home {
+  background-color: beige ;
+}
 .home h1 {
   
   color: blue;
