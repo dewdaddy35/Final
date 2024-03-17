@@ -26,7 +26,7 @@ function Navbar() {
         Recipes
       </Link>
       <Dropdown as={ButtonGroup}>
-      <Button  href="" variant="danger">Kitchen Tips</Button>
+      <Button  href="/" variant="danger">Kitchen Tips</Button>
 
       <Dropdown.Toggle split variant="danger" id="dropdown-split-basic" />
 
@@ -38,7 +38,7 @@ function Navbar() {
       </Dropdown.Menu>
     </Dropdown>
       <Dropdown as={ButtonGroup}>
-      <Button  href="" variant="danger">Ingredients</Button>
+      <Button  href="/" variant="danger">Ingredients</Button>
 
       <Dropdown.Toggle split variant="danger" id="dropdown-split-basic" />
 
