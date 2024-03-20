@@ -19,12 +19,11 @@ function Navbar() {
         <Link className="nav-link-active" aria-current="page" to="/">
           Home
         </Link>
-        <Link className="nav-link-active" aria-current="page" to="/about">
-          About Us
-        </Link>
+        
         <Link className="nav-link-active" aria-current="page" to="/recipe">
           Recipes
         </Link>
+        
 
         <DropdownButton
           variant=""
@@ -62,6 +61,12 @@ function Navbar() {
             Search
           </button>
         </form>
+        <Link className="nav-link-active" aria-current="page" to="/about">
+          About Us
+        </Link>
+        <Link className="nav-link-active" aria-current="page" to="/registration">
+          Register Account
+        </Link>
       </div>
     </div>
   );

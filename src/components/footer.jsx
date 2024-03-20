@@ -30,24 +30,22 @@ function Footer() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/about">
+                 
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="#">
+                    
+                  </Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link" to="/about">
                     About Us
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                    
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                    
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                    
-                  </Link>
+                <Link className="nav-link-active" aria-current="page" to="/registration">
+                   Register Account
+                </Link>
                 </li>
               </ul>
             </div>
