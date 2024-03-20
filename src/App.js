@@ -16,6 +16,7 @@ import Smoker from "./pages/smoker";
 import Airfryer from "./pages/airfryer";
 import Bbqgrill from "./pages/bbqgrill";
 import About from "./pages/about";
+import RecipeDetail from "./pages/recipeDetail";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="airfryer" element={<Airfryer />} />
           <Route path="bbqgrill" element={<Bbqgrill />} />
           <Route path="about" element={<About />} />
+          <Route path="/recipeDetail/:id" element={<RecipeDetail/>} />"
         </Routes>
 
         <Footer />
