@@ -1,6 +1,5 @@
 //import logo from "./logo.svg";
 import "./App.css";
-
 import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import Recipe from "./pages/recipe";
@@ -15,11 +14,11 @@ import Slowcooker from "./pages/slowcooker";
 import Smoker from "./pages/smoker";
 import Airfryer from "./pages/airfryer";
 import Bbqgrill from "./pages/bbqgrill";
+import Registration from "./pages/registration";
 import About from "./pages/about";
 import RecipeDetail from "./pages/recipeDetail";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -27,9 +26,10 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
-
-        <Routes>
+     
+          <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/registration" element={<Registration />} />
           <Route path="/recipe" element={<Recipe />} />
           <Route path="/beef" element={<Beef />} />
           <Route path="chicken" element={<Chicken />} />

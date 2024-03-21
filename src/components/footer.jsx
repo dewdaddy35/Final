@@ -30,33 +30,31 @@ function Footer() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/about">
+                 
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="#">
+                    
+                  </Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link" to="/about">
                     About Us
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                    
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                    
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                    
-                  </Link>
+                <Link className="nav-link-active" aria-current="page" to="/registration">
+                   Register Account
+                </Link>
                 </li>
               </ul>
             </div>
           
     
         <div className="img">
-          <i className="fa-brands fa-square-twitter"></i>
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-pinterest"></i>
+          <Link className="fa-brands fa-square-twitter"></Link>
+          <Link class="fa-brands fa-facebook"></Link>
+          <Link class="fa-brands fa-pinterest"></Link>
         </div>
         </div>
         </nav>
