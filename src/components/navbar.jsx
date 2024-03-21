@@ -24,7 +24,7 @@ function Navbar() {
           Recipes
         </Link>
         
-
+        
         <DropdownButton
           variant=""
           size="sm"
@@ -50,6 +50,13 @@ function Navbar() {
           <Dropdown.Item href="/chicken">Chicken</Dropdown.Item>
           <Dropdown.Item href="/seafood">Seafood</Dropdown.Item>
         </DropdownButton>
+        
+        <Link className="nav-link-active" aria-current="page" to="/about">
+          About Us
+        </Link>
+        <Link className="nav-link-active" aria-current="page" to="/registration">
+          Register Account
+        </Link>
         <form className="d-flex" role="search">
           <input
             className="form-control me-2"
@@ -61,12 +68,6 @@ function Navbar() {
             Search
           </button>
         </form>
-        <Link className="nav-link-active" aria-current="page" to="/about">
-          About Us
-        </Link>
-        <Link className="nav-link-active" aria-current="page" to="/registration">
-          Register Account
-        </Link>
       </div>
     </div>
   );

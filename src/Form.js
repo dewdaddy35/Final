@@ -81,7 +81,7 @@ export default function Form() {
  
             <form>
                 {/* Labels and inputs for form data */}
-                <label className="label">Name</label>
+                <label className="label">First and Last Name</label>
                 <input
                     onChange={handleName}
                     className="input"

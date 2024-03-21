@@ -52,9 +52,9 @@ function Footer() {
           
     
         <div className="img">
-          <i className="fa-brands fa-square-twitter"></i>
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-pinterest"></i>
+          <Link className="fa-brands fa-square-twitter"></Link>
+          <Link class="fa-brands fa-facebook"></Link>
+          <Link class="fa-brands fa-pinterest"></Link>
         </div>
         </div>
         </nav>

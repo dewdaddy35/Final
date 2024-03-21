@@ -3,7 +3,7 @@ import Form from "../Form"
  
 function Registration() {
     return (
-        <div className=" page">
+        <div className="form page">
              <Form />
         </div>
  

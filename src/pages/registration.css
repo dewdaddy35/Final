@@ -1,13 +1,14 @@
 .form {
     text-align: center;
-    background-color: green;
+    background-color: beige;
+
 }
  
 .form label {
     display: block;
     
     font-size: larger;
-    color: white;
+    color: black;
     padding: 5px;
 }
  
