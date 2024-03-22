@@ -1,0 +1,38 @@
+.recipeDetail .left-heading  h2 {
+    margin-top: 10px;
+}
+
+.recipeDetail .left-heading {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.recipeDetail .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.recipeDetail .left-heading .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+  }
+
+.recipeDetail .grid img {
+    width: 100%;
+}
+
+.recipeDetail .ingridients {
+    list-style: none;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.recipeDetail .instructions {
+    text-align: left;
+    padding-right: 5%;
+}
