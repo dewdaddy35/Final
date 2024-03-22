@@ -1,0 +1,21 @@
+# to run the front end of the app location:
+npm start
+
+
+
+
+# For API
+
+1 - Create the Model (data)
+
+2 - Serializer (parse the data to json )
+
+3 - View 
+
+4 - Urls
+
+5 - Add the Model to admin
+
+## On Models
+If you add or modify models, run migrations
+
