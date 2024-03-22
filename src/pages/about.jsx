@@ -8,7 +8,7 @@ function About() {
       <h1>About Us!</h1>
       <div className="cards">
         <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="./images/eric.jpg" />
+          <Card.Img variant="top" src="./images/Eric.jpg" />
           <Card.Body>
             <Card.Title>Eric Wells</Card.Title>
             <Card.Text>
