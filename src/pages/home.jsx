@@ -1,36 +1,45 @@
+import { useNavigate } from "react-router-dom";
 import "./home.css";
 
 
 function Home() {
 
-  
+  const navigate = useNavigate();
+
+  function sendToRecipe() {
+    navigate('/recipe');
+    console.log("Sending to Recipe page")
+}
 
   return (
-    <div className="home page">
+    <div className="container-home">
+    <div className="home-page">
       <h1> Show Us How You Burn!!! </h1>
       <section className="section">
-        <div>
+        <div className="home-bbq">
           <img className="img-main" src="./images/bbqgrill.png" alt="" />
-         
+          <div>
+            <p className="home">
+            This website was designed to allow cooking enthusiasts to search, upload, and save recipes. You can post pictures of recipes you've created and comment on those recipes. Share your own recipes, cooking styles, and show the world how you excel in the kitchen, on the grill, with a smoker, or even on the open flame.
+            </p>
+          </div>  
         </div>
-        <div>
-          <p className="home">
-            This website was design to allow cooking enthusiast to search,
-            upload and save recipes. You can post picture of recipes you created
-            and comment on those recipes. Share your own recipe, cooking styles
-            and show the world how excel in the kitchen, on the grill, with a
-            smoker or even on the open flame.
-          </p>
-          <div className="flex">
-          <p>Shrimp and Grits</p>
-          <img className="img-p" src="./images/shrimpandgrits.webp" alt="" />
-          <p>Salmon</p>
-          <img className="img-p2" src="./images/salmon.png" alt="" />
+        <div className="recipe-image row">
+          <div className="col-md-6">
+            <img src="./images/pulledPorkTwo.png" alt="" />
           </div>
-        </div>
+          <div className="col-md-6">
+            <img src="./images/sliders.png" alt="" />
+          </div>
+          </div>
+          <div className="recipe-text">
+        <p>Click here for recipes</p>
+        <button onClick={() => sendToRecipe()}>Explore Recipes</button>
+      </div>
       </section>
-     
     </div>
+  </div>
+  
   );
 }
 
