@@ -2,60 +2,69 @@ import { useParams } from "react-router-dom";
 import "./recipeDetail.css";
 import { useEffect, useState } from "react";
 import dataService from "../services/dataService";
+import {
+  cookingStyleText,
+  skillLevelText,
+  foodTypeText,
+} from "../services/textService";
 
 const RecipeDetail = () => {
-    const [recipe, setRecipe] = useState({});
-    const { id } = useParams();
+  const [recipe, setRecipe] = useState({});
+  const { id } = useParams();
 
-    useEffect(() => {
-        getRecipe();
-    }, []);
+  useEffect(() => {
+    getRecipe();
+  }, []);
 
-    const getRecipe = () => {
-        const recipeData = dataService.getRecipe(id);
-        setRecipe(recipeData);
-    };
+  const getRecipe = async () => {
+    let recipeData = await dataService.getRecipe(id);
 
-    return (
-        <div className="recipeDetail page">
+    recipeData.ingredients = recipeData.ingredients.split("\r\n");
+    recipeData.steps = recipeData.steps.split("\r\n");
 
-            <h3>Recipe Details</h3>
+    setRecipe(recipeData);
+  };
 
-            <div className="grid">
-                <div className="left-heading">
-                    <h2>{recipe.title}</h2>
-                    <div className="details">
-                        <label>Cook Time: {recipe.cookTime}</label><br />
-                        <label>Method: {recipe.method}</label><br />
-                        <label>Level: {recipe.level}</label>
-                    </div>
-                </div>
+  return (
+    <div className="recipeDetail page">
+      <h3>Recipe Details</h3>
 
-                <div>
-                <img src={recipe.image} alt="" />
-                </div>
-
-                <div>
-                <h5>Ingredients:</h5>
-                    <ul className="ingridients">
-                        {recipe.ingredients?.map(ing => (
-                            <li>{ing}</li>
-                        ))}
-                    </ul>
-                </div>
-
-                <div>
-                <h5>Instructions:</h5>
-                <ol className="instructions">
-                    {recipe.steps?.map(steps => (
-                        <li>{steps}</li>
-                    ))}
-                </ol>
-                </div>
-            </div>
-
+      <div className="grid">
+        <div className="left-heading">
+          <h2>{recipe.title}</h2>
+          <div className="details">
+            <label>Cook Time: {recipe.cooktime}</label>
+            <br />
+            <label>Method: {cookingStyleText(recipe.cooking_style)}</label>
+            <br />
+            <label>Level: {skillLevelText(recipe.skill_level)}</label>
+          </div>
         </div>
-    );
-}
+
+        <div>
+          <img src={recipe.image} alt="" />
+        </div>
+
+        <div>
+          <h5>Ingredients:</h5>
+          <ul className="ingridients">
+            {recipe.ingredients?.map((ing) => (
+              <li>{ing}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h5>Instructions:</h5>
+          <ol className="instructions">
+            {recipe.steps?.map((steps) => (
+              <li>{steps}</li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default RecipeDetail;

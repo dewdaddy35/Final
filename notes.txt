@@ -19,3 +19,9 @@ npm start
 ## On Models
 If you add or modify models, run migrations
 
+
+
+# if you modify the models (like adding new options or new field,)
+# you need to make mihgrations
+python3 manage.py makemigrations
+python3 manage.py migrate

@@ -1,59 +1,73 @@
-import { useEffect,useState } from "react"; 
+import { useEffect, useState } from "react";
 import "./recipe.css";
-import dataService from '../services/dataService';
+import dataService from "../services/dataService";
 import { useNavigate } from "react-router-dom";
+import {
+  cookingStyleText,
+  skillLevelText,
+  foodTypeText,
+} from "../services/textService";
 
 function Recipe() {
-
   const [allPosts, setAllPost] = useState([]);
   const navigate = useNavigate();
 
-
-  function loadPost() {
-    const data = dataService.getPosts();
+  async function loadPost() {
+    const data = await dataService.getPosts();
     setAllPost(data);
-
   }
 
   //when the page loads
-  useEffect(function() {
+  useEffect(function () {
     loadPost();
   }, []);
-  
+
   function sendToDetails(id) {
-    navigate('/recipeDetail/' + id);
-    console.log("'Sending User to Recipe Details page.")
+    navigate("/recipeDetail/" + id);
+    console.log("'Sending User to Recipe Details page.");
   }
-  
+
   return (
     <div className="recipe page">
-    <h1>Recipes</h1>
-    <div className="post-list">
-      {allPosts.map(post =>
-        <div  className="card" style={{ width: "18rem" }} key={post.id}>
-          <img src={post.image} className="card-img-top" alt={post.title} />
-          <div className="card-body">
-            <h5 className="card-title">{post.title}</h5>
-            <p className="card-text">Method: {post.method}</p>
-            <p className="card-text">Level: {post.level}</p>
-            <button onClick={() => sendToDetails(post.id)} className="btn btn-primary">Go to Recipe</button>
+      <h1>Recipes</h1>
+      <div className="post-list">
+        {allPosts.map((post) => (
+          <div className="card" style={{ width: "18rem" }} key={post.id}>
+            <img src={post.image} className="card-img-top" alt={post.title} />
+            <div className="card-body">
+              <h5 className="card-title">{post.title}</h5>
+              <p className="card-text">
+                Method: {cookingStyleText(post.cooking_style)}
+              </p>
+              <p className="card-text">
+                Food Type: {foodTypeText(post.food_type)}
+              </p>
+              <p className="card-text">
+                Level: {skillLevelText(post.skill_level)}
+              </p>
+              <button
+                onClick={() => sendToDetails(post.id)}
+                className="btn btn-primary"
+              >
+                Go to Recipe
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        ))}
+      </div>
+      <form className="form-inline search my-2 my-lg-0">
+        <input
+          className="form-control search mr-sm-2"
+          type="search"
+          placeholder="Search for a recipe"
+          aria-label="Search"
+        />
+        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Search
+        </button>
+      </form>
     </div>
-    <form className="form-inline search my-2 my-lg-0">
-      <input
-        className="form-control search mr-sm-2"
-        type="search"
-        placeholder="Search for a recipe"
-        aria-label="Search"
-      />
-      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-        Search
-      </button>
-    </form>
-  </div>
-);
+  );
 }
 
 export default Recipe;
