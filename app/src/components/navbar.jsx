@@ -64,7 +64,7 @@ function Navbar() {
             placeholder="Search"
             aria-label="Search"
           />
-          <button className="btn btn-outline-danger" type="submit">
+          <button className="btn btn-outline-" type="submit">
             Search
           </button>
         </form>

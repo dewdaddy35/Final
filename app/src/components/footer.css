@@ -7,8 +7,8 @@
   height: 100%;
 }
 
-.fa-brands {
-  font-size: 30px;
+.footer .fa-brands {
+  font-size: 40px;
 }
 
 .img {
@@ -20,4 +20,13 @@
 .navbar-nav {
   justify-content: space-evenly;
   width: 100%;
+}
+.footer .nav-item {
+  justify-content: space-evenly;
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .about .cards {
+      gap: 10px; /* Reduce gap for smaller screens */
+  }
 }

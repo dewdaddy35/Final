@@ -64,6 +64,11 @@
   border-color: black;
   margin-left: 10px;
 }
-
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .about .cards {
+      gap: 10px; /* Reduce gap for smaller screens */
+  }
+}
 
 
