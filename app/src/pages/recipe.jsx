@@ -47,7 +47,7 @@ function Recipe() {
               </p>
               <button
                 onClick={() => sendToDetails(post.id)}
-                className="btn btn-primary"
+                className="go-to-recipe btn btn-primary"
               >
                 Go to Recipe
               </button>

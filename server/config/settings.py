@@ -33,16 +33,16 @@ CORS_ALLOW_ALL_ORIGINS = True
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    #'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'recipe',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
+    'recipe',
 ]
 
 MIDDLEWARE = [
@@ -88,7 +88,7 @@ REST_FRAMEWORK = {
     )
 }
 
-
+#AUTH_USER_MODEL = "users.CustomUser"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases

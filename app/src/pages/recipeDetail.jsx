@@ -2,11 +2,7 @@ import { useParams } from "react-router-dom";
 import "./recipeDetail.css";
 import { useEffect, useState } from "react";
 import dataService from "../services/dataService";
-import {
-  cookingStyleText,
-  skillLevelText,
-  foodTypeText,
-} from "../services/textService";
+import { cookingStyleText, skillLevelText } from "../services/textService";
 
 const RecipeDetail = () => {
   const [recipe, setRecipe] = useState({});
