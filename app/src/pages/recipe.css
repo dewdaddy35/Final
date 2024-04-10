@@ -1,21 +1,53 @@
 .recipe {
-  background-color: #f7f9f9;
+  background-color: beige;
   width: 100%;
 }
 
-
- .post-list .card {
+.post-list .card {
   display: inline-block;
   vertical-align: top;
   height: 360px;
   margin-right: 7px;
   margin-bottom: 7px;
- }
+}
 
- .card-img-top {
+.card-img-top {
   height: 150px;
- }
+}
 
 .card-title {
   height: 50px;
+}
+.page {
+  width: 100%
+}
+.recipe-page {
+  display: flex;
+  background-color: beige;
+  width: 100%;
+
+}
+
+.filters-container {
+  flex: 0 0 auto; /* Makes the filters container not grow or shrink */
+  margin-right: 30px; /* Adds some space between filters and recipe list */
+}
+
+.filter-buttons {
+  /* Your existing styles for filter buttons */
+}
+
+.recipe-list {
+  flex: 1; /* Takes up remaining space */
+}
+
+fieldset label {
+  display: block;
+  text-align: left;
+  padding-left: 30px;
+}
+
+fieldset legend {
+  text-align: left;
+  padding-left: 20px;
 }
