@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Disable CORS policy
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -135,6 +137,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = "/"
+MEDIA_ROOT = BASE_DIR
 
 
 # Default primary key field type

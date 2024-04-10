@@ -1,59 +1,234 @@
-import { useEffect,useState } from "react"; 
+import React, { useEffect, useState } from "react";
 import "./recipe.css";
-import dataService from '../services/dataService';
+import dataService from "../services/dataService";
 import { useNavigate } from "react-router-dom";
 
-function Recipe() {
+import {
+  cookingStyleText,
+  skillLevelText,
+  foodTypeText,
+} from "../services/textService";
 
+function Recipe() {
   const [allPosts, setAllPost] = useState([]);
+  const [filters, setFilters] = useState({
+    cooking_style: "",
+    skill_level: "",
+    food_type: "",
+  });
   const navigate = useNavigate();
 
+  function getFilteredPosts() {
+    const filteredPosts = allPosts.filter((post) => {
+      let matchesFilter = true;
+      if (
+        filters.cooking_style &&
+        post.cooking_style != filters.cooking_style
+      ) {
+        matchesFilter = false;
+      }
+      if (filters.skill_level && post.skill_level != filters.skill_level) {
+        matchesFilter = false;
+      }
+      if (filters.food_type && post.food_type != filters.food_type) {
+        matchesFilter = false;
+      }
+      return matchesFilter;
+    });
+    return filteredPosts;
+  }
 
-  function loadPost() {
-    const data = dataService.getPosts();
+  async function loadPost() {
+    const data = await dataService.getPosts();
     setAllPost(data);
-
   }
 
-  //when the page loads
-  useEffect(function() {
+  useEffect(() => {
     loadPost();
-  }, []);
-  
+  }, [filters]);
+
   function sendToDetails(id) {
-    navigate('/recipeDetail/' + id);
-    console.log("'Sending User to Recipe Details page.")
+    navigate("/recipeDetail/" + id);
+    console.log("'Sending User to Recipe Details page.");
   }
-  
+
+  function handleFilterChange(event) {
+    const { name, value } = event.target;
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      [name]: value,
+    }));
+  }
+
+  function clearFilters() {
+    setFilters({
+      cooking_style: "",
+      skill_level: "",
+      food_type: "",
+    });
+  }
+
   return (
-    <div className="recipe page">
-    <h1>Recipes</h1>
-    <div className="post-list">
-      {allPosts.map(post =>
-        <div  className="card" style={{ width: "18rem" }} key={post.id}>
-          <img src={post.image} className="card-img-top" alt={post.title} />
-          <div className="card-body">
-            <h5 className="card-title">{post.title}</h5>
-            <p className="card-text">Method: {post.method}</p>
-            <p className="card-text">Level: {post.level}</p>
-            <button onClick={() => sendToDetails(post.id)} className="btn btn-primary">Go to Recipe</button>
-          </div>
+    <div className="recipe-page page">
+      <div className="filter-section">
+        <h2>Filters</h2>
+        <div className="filter-buttons">
+          <fieldset>
+            <legend>Cooking Style</legend>
+            <label>
+              <input
+                type="radio"
+                name="cooking_style"
+                value="1"
+                checked={filters.cooking_style === "1"}
+                onChange={handleFilterChange}
+              />
+              Grilled
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="cooking_style"
+                value="2"
+                checked={filters.cooking_style === "2"}
+                onChange={handleFilterChange}
+              />
+              Smoked
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Skill Level</legend>
+            <label>
+              <input
+                type="radio"
+                name="skill_level"
+                value="1"
+                checked={filters.skill_level == "1"}
+                onChange={handleFilterChange}
+              />
+              Beginner
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="skill_level"
+                value="2"
+                checked={filters.skill_level == "2"}
+                onChange={handleFilterChange}
+              />
+              Intermediate
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="skill_level"
+                value="3"
+                checked={filters.skill_level == "3"}
+                onChange={handleFilterChange}
+              />
+              Expert
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Food Type</legend>
+            <label>
+              <input
+                type="radio"
+                name="food_type"
+                value="1"
+                checked={filters.food_type === "1"}
+                onChange={handleFilterChange}
+              />
+              Seafood
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="food_type"
+                value="2"
+                checked={filters.food_type === "2"}
+                onChange={handleFilterChange}
+              />
+              Pork
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="food_type"
+                value="3"
+                checked={filters.food_type === "3"}
+                onChange={handleFilterChange}
+              />
+              Beef
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="food_type"
+                value="4"
+                checked={filters.food_type === "4"}
+                onChange={handleFilterChange}
+              />
+              Poultry
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="food_type"
+                value="5"
+                checked={filters.food_type === "5"}
+                onChange={handleFilterChange}
+              />
+              Pizza
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="food_type"
+                value="6"
+                checked={filters.food_type === "6"}
+                onChange={handleFilterChange}
+              />
+              Beef Pork
+            </label>
+          </fieldset>
+          <button className="btn btn-info" onClick={clearFilters}>
+            Clear Filters
+          </button>
         </div>
-      )}
+      </div>
+      <div className="recipe-list">
+        <h1>Recipes</h1>
+        <div className="post-list">
+          {getFilteredPosts().map((post) => (
+            <div className="card" style={{ width: "18rem" }} key={post.id}>
+              <img src={post.image} className="card-img-top" alt={post.title} />
+              <div className="card-body">
+                <h5 className="card-title">{post.title}</h5>
+                <p className="card-text">
+                  Method: {cookingStyleText(post.cooking_style)}
+                </p>
+                <p className="card-text">
+                  Food Type: {foodTypeText(post.food_type)}
+                </p>
+                <p className="card-text">
+                  Level: {skillLevelText(post.skill_level)}
+                </p>
+                <button
+                  onClick={() => sendToDetails(post.id)}
+                  className="btn btn-primary"
+                >
+                  Go to Recipe
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-    <form className="form-inline search my-2 my-lg-0">
-      <input
-        className="form-control search mr-sm-2"
-        type="search"
-        placeholder="Search for a recipe"
-        aria-label="Search"
-      />
-      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-        Search
-      </button>
-    </form>
-  </div>
-);
+  );
 }
 
 export default Recipe;
+
+;
