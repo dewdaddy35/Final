@@ -39,10 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'recipe',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
+    'recipe',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -89,10 +90,10 @@ REST_FRAMEWORK = {
 }
 
 
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

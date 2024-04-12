@@ -15,6 +15,7 @@ import Smoker from "./pages/smoker";
 import Airfryer from "./pages/airfryer";
 import Bbqgrill from "./pages/bbqgrill";
 import Registration from "./pages/registration";
+import Login from "./pages/login";
 import About from "./pages/about";
 import RecipeDetail from "./pages/recipeDetail";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,10 +27,11 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
-     
-          <Routes>
+
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/registration" element={<Registration />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/recipe" element={<Recipe />} />
           <Route path="/beef" element={<Beef />} />
           <Route path="chicken" element={<Chicken />} />
@@ -42,7 +44,7 @@ function App() {
           <Route path="airfryer" element={<Airfryer />} />
           <Route path="bbqgrill" element={<Bbqgrill />} />
           <Route path="about" element={<About />} />
-          <Route path="/recipeDetail/:id" element={<RecipeDetail/>} />"
+          <Route path="/recipeDetail/:id" element={<RecipeDetail />} />"
         </Routes>
 
         <Footer />

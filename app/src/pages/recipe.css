@@ -6,7 +6,7 @@
 .post-list .card {
   display: inline-block;
   vertical-align: top;
-  height: 360px;
+  height: 370px;
   margin-right: 7px;
   margin-bottom: 7px;
 }
@@ -16,16 +16,24 @@
 }
 
 .card-title {
-  height: 50px;
+  height: 45px;
 }
+
+.card-text {
+  margin-bottom: 3px;
+}
+
+.go-to-recipe {
+  margin-top: 15px;
+}
+
 .page {
-  width: 100%
+  width: 100%;
 }
 .recipe-page {
   display: flex;
   background-color: beige;
   width: 100%;
-
 }
 
 .filters-container {

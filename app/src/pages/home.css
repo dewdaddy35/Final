@@ -1,12 +1,12 @@
 .home-page {
   background-color: beige;
   padding: 20px;
-  text-align: center; 
+  text-align: center;
 }
 
 .home-page h1 {
   color: black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   margin-top: 0;
 }
 
@@ -17,46 +17,61 @@
 }
 
 .img-main {
-  margin-right: 20px;
-  width: auto;
+  object-fit: cover;
   max-width: 100%;
-  max-height: 500px;
+  max-height: 600px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 63%;
 }
 
-.home-page p.home {
+/* .home-text {
+  font-size: 25pt;
+} */
+
+/* .home-page p.home {
   font-weight: bold;
   max-width: 300px;
-  margin: 0 auto 20px; 
+  margin: 0 auto 20px;
   text-align: left;
-}
+} */
 
 .recipe-image {
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recipe-image .col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 10px;
 }
 
 .recipe-image img {
-  max-width: 100%; 
-  max-height: 500px; 
-  margin-bottom: 20px; 
+  max-width: 100%;
+  max-height: 500px;
+  margin-bottom: 20px;
 }
 
 .recipe-text {
   color: red;
   text-transform: uppercase;
   font-style: italic;
+  margin-top: 20px;
 }
 
 .recipe-text button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #007bff; 
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
 .recipe-text button:hover {
-  background-color: #0056b3; 
+  background-color: #0056b3;
 }

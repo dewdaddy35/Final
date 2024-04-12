@@ -200,7 +200,7 @@ function Recipe() {
       <div className="recipe-list">
         <h1>Recipes</h1>
         <div className="post-list">
-          {getFilteredPosts().map((post) => (
+          {allPosts.map((post) => (
             <div className="card" style={{ width: "18rem" }} key={post.id}>
               <img src={post.image} className="card-img-top" alt={post.title} />
               <div className="card-body">
@@ -216,7 +216,7 @@ function Recipe() {
                 </p>
                 <button
                   onClick={() => sendToDetails(post.id)}
-                  className="btn btn-primary"
+                  className="go-to-recipe btn btn-primary"
                 >
                   Go to Recipe
                 </button>
@@ -230,5 +230,3 @@ function Recipe() {
 }
 
 export default Recipe;
-
-;

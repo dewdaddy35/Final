@@ -1,25 +1,7 @@
-/*.navbar {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  margin: 0;
+.navbar {
   padding: 0 !important;
-  justify-content: space-evenly;
+  position: sticky;
 }
-
-.navbar h3 {
-  color: var(--sub-heading-color);
-}
-
-.navbar .navbar-nav {
-  justify-content: space-evenly !important;
-  width: 100%;
-}*/
-  .navbar {
-          padding: 0 !important;
-           position: sticky;
-          }
 
 .navbar-brand {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -67,8 +49,6 @@
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .about .cards {
-      gap: 10px; /* Reduce gap for smaller screens */
+    gap: 10px; /* Reduce gap for smaller screens */
   }
 }
-
-
