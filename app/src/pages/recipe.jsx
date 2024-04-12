@@ -200,7 +200,7 @@ function Recipe() {
       <div className="recipe-list">
         <h1>Recipes</h1>
         <div className="post-list">
-          {allPosts.map((post) => (
+          {getFilteredPosts().map((post) => (
             <div className="card" style={{ width: "18rem" }} key={post.id}>
               <img src={post.image} className="card-img-top" alt={post.title} />
               <div className="card-body">
