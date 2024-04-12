@@ -17,18 +17,24 @@
 }
 
 .img-main {
-  margin-right: 20px;
-  width: auto;
+  object-fit: cover;
   max-width: 100%;
-  max-height: 500px;
+  max-height: 600px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 63%;
 }
 
-.home-page p.home {
+/* .home-text {
+  font-size: 25pt;
+} */
+
+/* .home-page p.home {
   font-weight: bold;
   max-width: 300px;
   margin: 0 auto 20px;
   text-align: left;
-}
+} */
 
 .recipe-image {
   margin-top: 20px;

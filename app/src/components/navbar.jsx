@@ -61,7 +61,7 @@ function Navbar() {
           Register Account
         </Link>
         <Link className="nav-link-active" aria-current="page" to="/login">
-          Login
+          Login / Register
         </Link>
         <form className="d-flex" role="search">
           <input
