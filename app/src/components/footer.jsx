@@ -1,8 +1,14 @@
 import "./footer.css";
 
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Footer() {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
   return (
     <div className="footer">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">

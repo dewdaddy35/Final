@@ -1,6 +1,7 @@
 import "./chicken.css";
 
 
+
 function Chicken() {
     return (
         <div className="chicken page">

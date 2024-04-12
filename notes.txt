@@ -20,6 +20,11 @@ npm start
 If you add or modify models, run migrations
 
 
+activate server
+C:\Users\ericw\OneDrive\Documents\shared_capstone\server>venv\Scripts\activate
+
+run server
+python manage.py runserver 
 
 # if you modify the models (like adding new options or new field,)
 # you need to make mihgrations
