@@ -47,6 +47,7 @@
 
 .recipe-list {
   flex: 1; /* Takes up remaining space */
+  position: relative;
 }
 
 fieldset label {
@@ -58,4 +59,11 @@ fieldset label {
 fieldset legend {
   text-align: left;
   padding-left: 20px;
+}
+.filter-btn {
+  background-color: beige;
+  position: absolute;
+  right: 100px;
+  top: 10px;
+  
 }
