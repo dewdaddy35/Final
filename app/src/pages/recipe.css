@@ -1,9 +1,12 @@
 .recipe {
-  background-color: beige;
+  background-color:black;
+  
   width: 100%;
 }
 
 .post-list .card {
+  background-color: black;
+  color: lightgrey;
   display: inline-block;
   vertical-align: top;
   height: 370px;
@@ -32,12 +35,13 @@
 }
 .recipe-page {
   display: flex;
-  background-color: beige;
+  background-color: black;
+  color: white;
   width: 100%;
 }
 
 .filters-container {
-  flex: 0 0 auto; /* Makes the filters container not grow or shrink */
+    flex: 0 0 auto; /* Makes the filters container not grow or shrink */
   margin-right: 30px; /* Adds some space between filters and recipe list */
 }
 
@@ -61,7 +65,8 @@ fieldset legend {
   padding-left: 20px;
 }
 .filter-btn {
-  background-color: beige;
+  background-color: #6c757d;
+  color: white;
   position: absolute;
   right: 100px;
   top: 10px;

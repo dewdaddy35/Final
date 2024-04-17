@@ -1,8 +1,10 @@
 .about { 
-background-color: beige;
+background-color: black;
+color:lightgrey;
 height: 100%;
 }
 .about .cards {
+    
     margin-top: 40px;
     display: flex;
     gap: 300px;
@@ -16,6 +18,14 @@ height: 100%;
     height: 300px;
     border-radius: 1rem;
     border-color: black;
+}
+.card-body{
+   background-color: black;
+  
+      
+}
+.card{
+    color: lightgrey;
 }
 /* Media query for smaller screens */
 @media (max-width: 768px) {

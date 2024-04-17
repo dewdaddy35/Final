@@ -22,7 +22,7 @@ const RecipeDetail = () => {
   };
 
   return (
-    <div className="recipeDetail page">
+    <div className="recipeDetail">
       <h3>Recipe Details</h3>
 
       <div className="grid">

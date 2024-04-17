@@ -199,7 +199,7 @@ function Recipe() {
               Beef Pork
             </label>
           </fieldset>
-          <button className="btn btn-info" onClick={clearFilters}>
+          <button className="btn btn-secondary" onClick={clearFilters}>
             Clear Filters
           </button>
         </div>
@@ -225,7 +225,7 @@ function Recipe() {
                 </p>
                 <button
                   onClick={() => sendToDetails(post.id)}
-                  className="go-to-recipe btn btn-primary"
+                  className="go-to-recipe btn btn-secondary"
                 >
                   Go to Recipe
                 </button>
