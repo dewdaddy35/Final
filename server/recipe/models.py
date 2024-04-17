@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 
 class FoodType(models.IntegerChoices):
@@ -29,6 +30,7 @@ class Recipe(models.Model):
     food_type = models.IntegerField(choices = FoodType.choices, null=True, default=1)
     cooking_style = models.IntegerField(choices = CookingStyle.choices, null=True, default=1)
     skill_level = models.IntegerField(choices = SkillLevel.choices, null=True, default=1)
+    liked_by = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="liked_recipes", blank=True)
 
 
     def __str__(self):
