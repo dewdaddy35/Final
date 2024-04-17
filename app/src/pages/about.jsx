@@ -15,7 +15,7 @@ function About() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-            <Button variant="light">Go Somewhere</Button>
+            <Button variant="secondary">Go Somewhere</Button>
           </Card.Body>
         </Card>
         <Card style={{ width: "18rem" }}>
@@ -26,7 +26,7 @@ function About() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
-            <Button variant="light">Go Somewhere</Button>
+            <Button variant="secondary">Go Somewhere</Button>
           </Card.Body>
         </Card>
       </div>
