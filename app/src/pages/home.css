@@ -1,7 +1,10 @@
 .home-page {
-  background-color: beige;
-  padding: 0;
-  position: relative;
+
+  background-color: black;
+  
+  padding: 20px;
+  text-align: center;
+
 }
 
 .home-page h1 {

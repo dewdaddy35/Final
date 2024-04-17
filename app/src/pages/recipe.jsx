@@ -17,6 +17,11 @@ function Recipe() {
     food_type: "",
   });
   const navigate = useNavigate();
+  const [filterVisible, setFilterVisible] = useState(true);
+
+  function showHide() {
+    setFilterVisible(!filterVisible);
+  }
 
   function getFilteredPosts() {
     const filteredPosts = allPosts.filter((post) => {
@@ -69,8 +74,10 @@ function Recipe() {
   }
 
   return (
-    <div className="recipe-page page">
-      <div className="filter-section">
+    
+      <div className="recipe-page page">
+      {filterVisible ?
+      ( <div className="filter-section">
         <h2>Filters</h2>
         <div className="filter-buttons">
           <fieldset>
@@ -192,13 +199,15 @@ function Recipe() {
               Beef Pork
             </label>
           </fieldset>
-          <button className="btn btn-info" onClick={clearFilters}>
+          <button className="btn btn-secondary" onClick={clearFilters}>
             Clear Filters
           </button>
         </div>
-      </div>
+
+      </div> ) : null }
       <div className="recipe-list">
-        <h1>Recipes</h1>
+        <h1>Recipes</h1> 
+        <button onClick={showHide} className="filter-btn">Show/hide filters</button>
         <div className="post-list">
           {getFilteredPosts().map((post) => (
             <div className="card" style={{ width: "18rem" }} key={post.id}>
@@ -216,7 +225,7 @@ function Recipe() {
                 </p>
                 <button
                   onClick={() => sendToDetails(post.id)}
-                  className="go-to-recipe btn btn-primary"
+                  className="go-to-recipe btn btn-secondary"
                 >
                   Go to Recipe
                 </button>

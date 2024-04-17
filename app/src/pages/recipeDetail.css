@@ -1,3 +1,9 @@
+.recipeDetail{
+    background-color: black;
+    color: lightgray;
+    
+
+}
 .recipeDetail .left-heading  h2 {
     margin-top: 10px;
 }
