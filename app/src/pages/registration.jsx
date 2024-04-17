@@ -94,7 +94,7 @@ function Registration() {
           className="input"
           value={firstName}
           type="text"
-          placeholder="Please enter your first name"
+          placeholder="First name"
         />
 
         <label className="label">Last Name</label>
@@ -103,7 +103,7 @@ function Registration() {
           className="input"
           value={lastName}
           type="text"
-          placeholder="Please enter your last name"
+          placeholder="Last name"
         />
 
         <label className="label">Email</label>
@@ -112,7 +112,7 @@ function Registration() {
           className="input"
           value={email}
           type="email"
-          placeholder="Please enter your emaail"
+          placeholder="Enter email"
         />
         <div id="emailHelp" className="form-text">
           We'll never share your email with anyone else.
@@ -124,7 +124,7 @@ function Registration() {
           className="input"
           value={password}
           type="password"
-          placeholder="Please enter your password"
+          placeholder="Enter password"
         />
 
         <button onClick={handleSubmit} className="btn" type="submit">
