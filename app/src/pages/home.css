@@ -1,40 +1,53 @@
 .home-page {
-  background-color: beige;
+
+  background-color: black;
+  
   padding: 20px;
   text-align: center;
+
 }
 
 .home-page h1 {
-  color: black;
+  color: white;
   font-family: Georgia, "Times New Roman", Times, serif;
   margin-top: 0;
+  position: absolute;
+  left: 25%;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-size: 50pt;
 }
 
 .home-bbq {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 500px;
+  position: relative;
+  display: inline-block;
 }
 
 .img-main {
   object-fit: cover;
-  max-width: 100%;
-  max-height: 600px;
+  height: 100%;
   width: 100%;
-  object-fit: cover;
-  object-position: center 63%;
 }
 
-/* .home-text {
-  font-size: 25pt;
-} */
+.home-text {
+  position: absolute;
+  top: 15%;
+  right: 10px;
+  color: white;
+  width: 35%;
+  font-size: 20pt;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+}
 
-/* .home-page p.home {
+.home-page p.home {
   font-weight: bold;
   max-width: 300px;
   margin: 0 auto 20px;
-  text-align: left;
-} */
+  text-align: center;
+}
 
 .recipe-image {
   margin-top: 20px;

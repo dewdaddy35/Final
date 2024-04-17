@@ -19,7 +19,7 @@
 }
 
 .navbar .container-fluid {
-  background-color: yellowgreen;
+  background-color: gray;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,7 +27,7 @@
 }
 
 .navbar a {
-  color: black;
+  color: white;
   text-decoration: none;
   transition: color 0.3s;
 }

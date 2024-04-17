@@ -1,12 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import "./login.css";
+import dataService from "../services/dataService";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
+  //get the token
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -16,18 +27,20 @@ function Login() {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const exampleEmail = "example@example.com";
-    const examplePassword = "password123";
+    let response = await dataService.login(email, password);
+    console.log(response);
 
-    if (email === exampleEmail && password === examplePassword) {
-      toast.success("Success!");
-      console.log("Login");
-    } else {
+    if (!response) {
       toast.error("Invalid Email or Password!");
-      console.log("Invalid Email or Password");
+    } else {
+      toast.success("Success!");
+      let token = response.token;
+      localStorage.setItem("token", token);
+
+      setTimeout(() => navigate("/home"), 2000); //clock//wait
     }
   };
 
@@ -64,16 +77,7 @@ function Login() {
               id="exampleInputPassword1"
             />
           </div>
-          <div className="mb-3 form-check">
-            <input
-              type="checkbox"
-              className="form-check-input"
-              id="exampleCheck1"
-            />
-            <label className="form-check-label" htmlFor="exampleCheck1">
-              Stay signed in
-            </label>
-          </div>
+
           <button type="submit" className="btn btn-primary">
             Sign in
           </button>

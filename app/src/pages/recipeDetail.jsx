@@ -21,8 +21,12 @@ const RecipeDetail = () => {
     setRecipe(recipeData);
   };
 
+  const like = () => {
+    dataService.saveLike(id);
+  };
+
   return (
-    <div className="recipeDetail page">
+    <div className="recipeDetail">
       <h3>Recipe Details</h3>
 
       <div className="grid">
@@ -34,6 +38,8 @@ const RecipeDetail = () => {
             <label>Method: {cookingStyleText(recipe.cooking_style)}</label>
             <br />
             <label>Level: {skillLevelText(recipe.skill_level)}</label>
+            <br />
+            <button onClick={like}>Like</button>
           </div>
         </div>
 
@@ -44,8 +50,8 @@ const RecipeDetail = () => {
         <div>
           <h5>Ingredients:</h5>
           <ul className="ingridients">
-            {recipe.ingredients?.map((ing) => (
-              <li>{ing}</li>
+            {recipe.ingredients?.map((ing, index) => (
+              <li key={index}>{ing}</li>
             ))}
           </ul>
         </div>
@@ -53,8 +59,8 @@ const RecipeDetail = () => {
         <div>
           <h5>Instructions:</h5>
           <ol className="instructions">
-            {recipe.steps?.map((steps) => (
-              <li>{steps}</li>
+            {recipe.steps?.map((steps, index) => (
+              <li key={index}>{steps}</li>
             ))}
           </ol>
         </div>

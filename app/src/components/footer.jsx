@@ -34,23 +34,19 @@ function Footer() {
                   Home
                 </Link>
               </li>
-              <li className="nav-item"></li>
-              <li className="nav-item">
-                <Link className="nav-link" to="#"></Link>
-              </li>
+             
+              <Link className="nav-link-active" aria-current="page" to="/recipe">
+          Recipes
+        </Link>
               <li className="nav-item">
                 <Link className="nav-link" to="/about">
                   About Us
                 </Link>
               </li>
               <li className="nav-item">
-                <Link
-                  className="nav-link-active"
-                  aria-current="page"
-                  to="/registration"
-                >
-                  Register Account
-                </Link>
+              <Link className="nav-link-active" aria-current="page" to="/login">
+          Login / Register
+        </Link>
               </li>
             </ul>
           </div>
