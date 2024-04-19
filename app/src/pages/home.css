@@ -2,13 +2,14 @@
 
   background-color: black;
   
+  
   padding: 20px;
   text-align: center;
 
 }
 
 .home-page h1 {
-  color: white;
+  color: whitesmoke;
   font-family: Georgia, "Times New Roman", Times, serif;
   margin-top: 0;
   position: absolute;
@@ -35,7 +36,7 @@
   position: absolute;
   top: 15%;
   right: 10px;
-  color: white;
+  color: whitesmoke;
   width: 35%;
   font-size: 20pt;
   font-family: Arial, Helvetica, sans-serif;
@@ -71,6 +72,7 @@
   color: red;
   text-transform: uppercase;
   font-style: italic;
+  font-size: xx-large;
   margin-top: 20px;
 }
 
@@ -87,4 +89,18 @@
 
 .recipe-text button:hover {
   background-color: #0056b3;
+}
+.cards{
+  background-color: black;
+
+  display: flex;
+  gap: 40px;
+  justify-content: space-evenly;
+  padding-top: 10px;;
+}
+.text{
+ color: gray !important;
+} 
+.img{
+  height: 300px;
 }
