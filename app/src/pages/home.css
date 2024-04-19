@@ -1,11 +1,13 @@
 .home-page {
-
   background-color: black;
-  
-  
-  padding: 20px;
-  text-align: center;
 
+  padding: 20px;
+  background-color: black;
+}
+
+.home-page {
+  color: white;
+  text-align: center;
 }
 
 .home-page h1 {
@@ -90,17 +92,36 @@
 .recipe-text button:hover {
   background-color: #0056b3;
 }
-.cards{
+.cards {
   background-color: black;
 
   display: flex;
   gap: 40px;
   justify-content: space-evenly;
-  padding-top: 10px;;
+  padding-top: 10px;
 }
-.text{
- color: gray !important;
-} 
-.img{
+.text {
+  color: gray !important;
+}
+.img {
   height: 300px;
+}
+/* Media queries*/
+@media (max-width: 768px) {
+  .home-page h1 {
+    font-size: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .home-text {
+    width: 90%;
+    right: 5%;
+    font-size: 1rem;
+  }
+
+  .recipe-image .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }

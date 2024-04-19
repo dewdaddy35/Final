@@ -1,7 +1,6 @@
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 # test
-
 
 class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
