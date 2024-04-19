@@ -5,6 +5,7 @@
   width: 100%;
   bottom: 0;
   height: 100%;
+  background-color: gray;
 }
 
 .footer .fa-brands {
@@ -23,10 +24,4 @@
 }
 .footer .nav-item {
   justify-content: space-evenly;
-}
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .about .cards {
-      gap: 10px; /* Reduce gap for smaller screens */
-  }
 }

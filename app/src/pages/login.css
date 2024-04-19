@@ -1,14 +1,80 @@
 .login-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
+  margin-top: 50px;
 }
 
 .form-container {
   width: 400px;
   height: 400px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+}
+
+.reg-link {
+  color: red;
+}
+
+.registration-link {
+  margin-top: 10px;
+}
+
+.log-in {
+  width: 75%;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+}
+
+.log-in:hover {
+  background-color: gray;
+}
+
+.form-container h5 {
+  color: gray;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  /* For tablets and smaller screens */
+  .form-container {
+    width: 100%;
+    padding: 15px;
+    height: auto;
+  }
+
+  .log-in {
+    width: 100%;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+  }
+
+  .registration-link {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For mobile devices */
+  .form-container {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+  }
+
+  .log-in {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.8rem;
+  }
+
+  .registration-link {
+    text-align: center;
+  }
 }
