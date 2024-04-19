@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./registration.css";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 function Registration() {
   // States for registration
@@ -7,130 +9,94 @@ function Registration() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  // States for checking the errors
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(false);
+  const [account, setAccount] = useState(false);
+  const navigate = useNavigate();
 
   // Handling the name change
   const handleName = (e) => {
     setFirstName(e.target.value);
-    setSubmitted(false);
   };
 
   const handleLastName = (e) => {
     setLastName(e.target.value);
-    setSubmitted(false);
   };
 
   // Handling the email change
   const handleEmail = (e) => {
     setEmail(e.target.value);
-    setSubmitted(false);
   };
 
   // Handling the password change
   const handlePassword = (e) => {
     setPassword(e.target.value);
-    setSubmitted(false);
   };
 
   // Handling the form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (firstName === "" || email === "" || password === "") {
-      setError(true);
+
+    if (!firstName || !lastName || !email || !password) {
+      toast.error("All fields need to be filled out");
     } else {
-      setSubmitted(true);
-      setError(false);
+      toast.success("Your account has been created! Please Login to continue.");
+
+      setTimeout(() => navigate("/login"), 3000);
     }
   };
 
-  // Showing success message
-  const successMessage = () => {
-    return (
-      <div
-        className="success"
-        style={{
-          display: submitted ? "" : "none",
-        }}
-      >
-        <h1>User {firstName} successfully registered!!</h1>
-      </div>
-    );
-  };
-
-  // Showing error message if error is true
-  const errorMessage = () => {
-    return (
-      <div
-        className="error"
-        style={{
-          display: error ? "" : "none",
-        }}
-      >
-        <h1>Please enter all the fields</h1>
-      </div>
-    );
-  };
-
   return (
-    <div className="form page">
-      <div>
-        <h1>Register Account</h1>
+    <div className="register-form-container">
+      <div className="form-container">
+        <h1>Register</h1>
+        <h5>Please fill in the information below:</h5>
+        <form>
+          <div className="mb-3">
+            <label className="label"></label>
+            <input
+              onChange={handleName}
+              className="form-control"
+              value={firstName}
+              type="text"
+              placeholder="First name"
+            />
+          </div>
+          <div className="mb-3">
+            <label className="label"></label>
+            <input
+              onChange={handleLastName}
+              className="form-control"
+              value={lastName}
+              type="text"
+              placeholder="Last name"
+            />
+          </div>
+          <div className="mb-3">
+            <label className="label"></label>
+            <input
+              onChange={handleEmail}
+              className="form-control"
+              value={email}
+              type="email"
+              placeholder="Enter email"
+            />
+          </div>
+          <div className="mb-3">
+            <div id="emailHelp" className="form-text"></div>
+            <label className="label"></label>
+            <input
+              onChange={handlePassword}
+              className="form-control"
+              value={password}
+              type="password"
+              placeholder="Password"
+            />
+          </div>
+          <button onClick={handleSubmit} className="account" type="submit">
+            CREATE MY ACCOUNT
+          </button>
+        </form>
+        <ToastContainer />
       </div>
-
-      {/* Calling to the methods */}
-      <div className="messages">
-        {errorMessage()}
-        {successMessage()}
-      </div>
-
-      <form>
-        {/* Labels and inputs for form data */}
-        <label className="label">First Name</label>
-        <input
-          onChange={handleName}
-          className="input"
-          value={firstName}
-          type="text"
-          placeholder="First name"
-        />
-
-        <label className="label">Last Name</label>
-        <input
-          onChange={handleLastName}
-          className="input"
-          value={lastName}
-          type="text"
-          placeholder="Last name"
-        />
-
-        <label className="label">Email</label>
-        <input
-          onChange={handleEmail}
-          className="input"
-          value={email}
-          type="email"
-          placeholder="Enter email"
-        />
-        <div id="emailHelp" className="form-text">
-          We'll never share your email with anyone else.
-        </div>
-
-        <label className="label">Password</label>
-        <input
-          onChange={handlePassword}
-          className="input"
-          value={password}
-          type="password"
-          placeholder="Enter password"
-        />
-
-        <button onClick={handleSubmit} className="btn" type="submit">
-          Submit
-        </button>
-      </form>
     </div>
   );
 }

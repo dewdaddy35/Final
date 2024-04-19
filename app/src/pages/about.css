@@ -1,36 +1,47 @@
-.about { 
-background-color: black;
-color:lightgrey;
-height: 100%;
+.about {
+  background-color: black;
+  color: lightgrey;
+  height: 100%;
 }
 .about .cards {
-    
-    margin-top: 40px;
-    display: flex;
-    gap: 300px;
-    height: 520px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3rem;
-    margin-bottom: 5px;
+  margin-top: 40px;
+  display: flex;
+  gap: 300px;
+  height: 520px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  margin-bottom: 5px;
 }
 .about .card img {
-    height: 300px;
-    border-radius: 1rem;
-    border-color: black;
+  height: 300px;
+  border-radius: 1rem;
+  border-color: black;
 }
-.card-body{
-   background-color: black;
-  
-      
+.card-body {
+  background-color: black;
 }
-.card{
-    color: lightgrey;
+.card {
+  color: lightgrey;
 }
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .about .cards {
-        gap: 10px; /* Reduce gap for smaller screens */
-    }
+.card-text {
+  color: white;
+}
+button a {
+  color: white;
 }
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .about .cards {
+    /* Stack cards vertically */
+    flex-direction: column;
+    gap: 20px; /* Set a smaller gap between cards */
+    height: auto; /* Allow cards to adjust height */
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Add padding around the container */
+  }
+
+  /* Adjust other styles as needed for smaller screens */
+}

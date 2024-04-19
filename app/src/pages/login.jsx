@@ -47,12 +47,11 @@ function Login() {
   return (
     <div className="login-container">
       <div className="form-container">
-        <h1>Login Page</h1>
+        <h1>Login</h1>
+        <h5>Please enter your email and password</h5>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">
-              Email address
-            </label>
+            <label htmlFor="exampleInputEmail1" className="form-label"></label>
             <input
               onChange={handleEmail}
               value={email}
@@ -60,30 +59,33 @@ function Login() {
               className="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
+              placeholder="Email"
             />
             <div id="emailHelp" className="form-text">
               We'll never share your email with anyone else.
             </div>
           </div>
           <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">
-              Password
-            </label>
+            <label
+              htmlFor="exampleInputPassword1"
+              className="form-label"
+            ></label>
             <input
               onChange={handlePassword}
               value={password}
               type="password"
               className="form-control"
               id="exampleInputPassword1"
+              placeholder="Password"
             />
           </div>
 
-          <button type="submit" className="btn btn-primary">
-            Sign in
+          <button type="submit" className="log-in">
+            LOGIN
           </button>
-          <div>
-            <Link to="/registration">
-              Don't have an account? Click here to Register!
+          <div className="registration-link">
+            <Link to="/registration" className="reg-link">
+              Don't have an account? Create one
             </Link>
           </div>
         </form>

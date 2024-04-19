@@ -27,7 +27,7 @@ const RecipeDetail = () => {
 
   return (
     <div className="recipeDetail">
-      <h3>Recipe Details</h3>
+      <h1>Recipe Details</h1>
 
       <div className="grid">
         <div className="left-heading">
