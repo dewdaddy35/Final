@@ -41,6 +41,14 @@ class DataService {
     );
     return response;
   }
+
+  async registerUser(user) {
+    let response = await axios.post(
+      this.serverURL + `/api/auth/register/`,
+      user
+    );
+    return response;
+  }
 }
 
 export default new DataService();

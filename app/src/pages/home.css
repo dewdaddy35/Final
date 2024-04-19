@@ -103,9 +103,7 @@
 .text {
   color: gray !important;
 }
-.img {
-  height: 300px;
-}
+
 /* Media queries*/
 @media (max-width: 768px) {
   .home-page h1 {

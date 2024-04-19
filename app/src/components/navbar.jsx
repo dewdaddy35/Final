@@ -1,10 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./navbar.css";
 
 /* replace <a for <Link and </a for </Link
 replage href= for to= */
 
 function Navbar() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    toast.success("You have successfully logged out!");
+    navigate("/login");
+  };
+
+  const isLoggedIn = localStorage.getItem("token");
   return (
     <div className="navbar">
       <div className="container-fluid">
@@ -24,9 +35,15 @@ function Navbar() {
           About Us
         </Link>
 
-        <Link className="nav-link-active" aria-current="page" to="/login">
-          Login / Register
-        </Link>
+        {isLoggedIn ? (
+          <button className="nav-link-active" onClick={handleLogout}>
+            Logout
+          </button>
+        ) : (
+          <Link className="nav-link-active" to="/login">
+            Login / Register
+          </Link>
+        )}
         <form className="d-flex" role="search">
           <input
             className="form-control me-2"

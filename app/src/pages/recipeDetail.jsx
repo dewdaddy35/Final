@@ -39,7 +39,9 @@ const RecipeDetail = () => {
             <br />
             <label>Level: {skillLevelText(recipe.skill_level)}</label>
             <br />
-            <button onClick={like}>Like</button>
+            <span className="like-icon" onClick={like}>
+              <i className="fa-solid fa-heart"></i>
+            </span>
           </div>
         </div>
 

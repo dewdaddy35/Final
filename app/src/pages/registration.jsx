@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./registration.css";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import dataService from "../services/dataService";
 
 function Registration() {
   // States for registration
@@ -35,11 +36,21 @@ function Registration() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    let userObj = {
+      first_name: firstName,
+      last_name: lastName,
+      email: email,
+      username: email,
+      password: password,
+    };
+
     if (!firstName || !lastName || !email || !password) {
       toast.error("All fields need to be filled out");
     } else {
-      toast.success("Your account has been created! Please Login to continue.");
+      let response = await dataService.registerUser(userObj);
+      console.log("Register", response);
 
+      toast.success("Your account has been created! Please Login to continue.");
       setTimeout(() => navigate("/login"), 3000);
     }
   };
