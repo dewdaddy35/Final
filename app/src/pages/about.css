@@ -1,6 +1,6 @@
 .about {
   background-color: black;
-  color: lightgrey;
+  color: whitesmoke;
   height: 100%;
 }
 .about .cards {
@@ -22,7 +22,8 @@
   background-color: black;
 }
 .card {
-  color: lightgrey;
+  background-color: black;
+  color: whitesmoke;
 }
 .card-text {
   color: white;

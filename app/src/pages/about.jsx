@@ -10,8 +10,8 @@ function About() {
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src="./images/Eric.jpg" />
           <Card.Body>
-            <Card.Title>Eric Wells</Card.Title>
-            <Card.Text>
+            <Card.Title className="card">Eric Wells</Card.Title>
+            <Card.Text className="card">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
@@ -23,8 +23,8 @@ function About() {
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
-            <Card.Title>Neil Tejada</Card.Title>
-            <Card.Text>
+            <Card.Title className="card">Neil Tejada</Card.Title>
+            <Card.Text className="card">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
