@@ -1,56 +1,24 @@
-.form {
-    text-align: center;
-    background-color: beige;
+.register-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin-top: 50px;
+}
 
+.form-container {
+  width: 400px;
+  padding: 20px;
+  height: 400px;
 }
- 
-.form label {
-    display: block;
-    
-    font-size: larger;
-    color: black;
-    padding: 5px;
+
+.account {
+  width: 75%;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
 }
- 
-.form input {
-    border-radius: 5px;
-    border-color: yellowgreen;
-    font-size: larger;
-    padding: 5px;
-    margin: 2px;
- 
-}
- 
-.form .btn {
-    color: white;
-    background-color: rgba(18, 114, 61, 0.851);
-    border-radius: 5px;
-    border-color: yellowgreen;
-    font-size: larger;
-    display: block;
-    padding: 5px;
-    margin: 10px auto;
-}
- 
-.messages {
-    display: flex;
-    justify-content: center;
-}
- 
-.error {
-    display: block;
-    background-color: rgb(127, 29, 29);
-    color: white;
-    width: fit-content;
-    height: 50px;
-    padding: 5px;
-}
- 
-.success {
-    display: block;
-    background-color: lightblue;
-    color: black;
-    width: fit-content;
-    height: 50px;
-    padding: 5px;
+
+.account:hover {
+  background-color: gray;
 }

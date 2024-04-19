@@ -46,9 +46,17 @@
   border-color: black;
   margin-left: 10px;
 }
-/* Media query for smaller screens */
+/* Media query */
 @media (max-width: 768px) {
-  .about .cards {
-    gap: 10px; /* Reduce gap for smaller screens */
+  .navbar .container-fluid {
+    flex-direction: column;
+    align-items: start;
+  }
+  .navbar .form-inline {
+    width: 100%;
+    display: none;
+  }
+  .nav-link-active {
+    font-size: 14px;
   }
 }

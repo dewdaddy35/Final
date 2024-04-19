@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-import Button from "react-bootstrap/Button";
 import "./navbar.css";
 
 /* replace <a for <Link and </a for </Link
