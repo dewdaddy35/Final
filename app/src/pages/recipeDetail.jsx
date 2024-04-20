@@ -42,6 +42,9 @@ const RecipeDetail = () => {
             <span className="like-icon" onClick={like}>
               <i className="fa-solid fa-heart"></i>
             </span>
+            <span className="save-recipe" onClick={like}>
+              Save this recipe
+            </span>
           </div>
         </div>
 

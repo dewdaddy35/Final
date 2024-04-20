@@ -207,7 +207,7 @@ function Recipe() {
       </div> ) : null }
       <div className="recipe-list">
         <h1>Recipes</h1> 
-        <button onClick={showHide} className="filter-btn">Show/hide filters</button>
+        <button onClick={showHide} className="go-to-recipe btn btn-secondary">Show/hide filters</button>
         <div className="post-list">
           {getFilteredPosts().map((post) => (
             <div className="card" style={{ width: "18rem" }} key={post.id}>

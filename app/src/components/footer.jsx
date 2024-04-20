@@ -1,11 +1,23 @@
 import "./footer.css";
-
-import { Link } from "react-router-dom";
+import{  toast } from "react-toastify";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 function Footer() {
+  const navigate = useNavigate();
   const [isCollapsed, setIsCollapsed] = useState(true);
+  
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    toast.success("You have successfully logged out!");
+    navigate("/login");
 
+    setTimeout(() => {
+      navigate("/login");
+    }, 1000);
+  };
+
+  const isLoggedIn = localStorage.getItem("token");
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
@@ -24,10 +36,12 @@ function Footer() {
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            onClick={toggleCollapse}
           >
             <span className="navbar-toggler-icon" />
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className={`collapse navbar-collapse ${isCollapsed ? "" : "show"}`}
+            id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link className="nav-link" aria-current="page" to="/">
@@ -44,9 +58,15 @@ function Footer() {
                 </Link>
               </li>
               <li className="nav-item">
-              <Link className="nav-link-active" aria-current="page" to="/login">
-          Login / Register
-        </Link>
+              {isLoggedIn ? (
+          <Link className="nav-link-active" onClick={handleLogout}>
+            Logout
+          </Link>
+        ) : (
+          <Link className="nav-link-active" to="/login">
+            Login / Register
+          </Link>
+        )}
               </li>
             </ul>
           </div>

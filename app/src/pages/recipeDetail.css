@@ -43,21 +43,8 @@
   padding-right: 5%;
 }
 
-.like-icon {
-  cursor: pointer; /* Make the heart icon clickable */
-}
-
-.like-icon i {
-  color: lightgray; /* Default color */
-  font-size: 1.5em; /* Adjust size as needed */
-}
-
-.like-icon:hover i {
-  color: red; /* Change the heart icon color to red on hover */
-}
-
 /* Media query*/
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .recipeDetail .grid {
     grid-template-columns: 1fr;
   }
@@ -71,4 +58,31 @@
   .recipeDetail .instructions {
     padding: 0 5%;
   }
+}
+.like-icon,
+.save-recipe {
+  cursor: pointer;
+}
+
+.like-icon i {
+  color: lightgray;
+  font-size: 3em;
+}
+
+.like-icon:hover + .save-recipe,
+.save-recipe:hover + .like-icon {
+  color: red;
+}
+
+.like-icon:hover,
+.save-recipe:hover {
+  color: red;
+}
+
+.like-icon:hover i {
+  color: red;
+}
+
+.save-recipe {
+  font-size: 1.5em;
 }

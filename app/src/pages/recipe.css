@@ -27,7 +27,8 @@
 
 .go-to-recipe {
   margin-top: 15px;
-}
+  margin-bottom: 15px;
+ }
 
 .page {
   width: 100%;
@@ -66,7 +67,7 @@ fieldset legend {
 .filter-btn {
   background-color: #6c757d;
   color: white;
-  position: absolute;
+  
   right: 100px;
   top: 10px;
   

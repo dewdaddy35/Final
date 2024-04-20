@@ -4,7 +4,7 @@ import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import Recipe from "./pages/recipe";
 import Footer from "./components/footer";
-import Blog from "./pages/blog";
+
 import Registration from "./pages/registration";
 import Login from "./pages/login";
 import About from "./pages/about";
@@ -25,7 +25,7 @@ function App() {
           <Route path="/registration" element={<Registration />} />
           <Route path="/login" element={<Login />} />
           <Route path="/recipe" element={<Recipe />} />
-          <Route path="blog" element={<Blog />} />
+         
           <Route path="about" element={<About />} />
           <Route path="/recipeDetail/:id" element={<RecipeDetail />} />"
         </Routes>

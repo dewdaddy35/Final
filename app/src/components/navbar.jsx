@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import{  toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./navbar.css";
 
@@ -36,9 +36,9 @@ function Navbar() {
         </Link>
 
         {isLoggedIn ? (
-          <button className="nav-link-active" onClick={handleLogout}>
+          <Link className="nav-link-active" onClick={handleLogout}>
             Logout
-          </button>
+          </Link>
         ) : (
           <Link className="nav-link-active" to="/login">
             Login / Register
